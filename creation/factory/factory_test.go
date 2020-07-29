@@ -6,6 +6,7 @@ import (
 	"testing"
 )
 
+// TestFactoryPattern 测试工厂模式.
 func TestFactoryPattern(t *testing.T) {
 	new(factory.AFactory).Manufacture().Show()
 	new(factory.BFactory).Manufacture().Show()
