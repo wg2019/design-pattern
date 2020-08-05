@@ -4,17 +4,17 @@ package builder
 // HuaweiPhone 华为手机
 type HuaweiPhone struct{}
 
-// SetName 名称
+// Name 名称
 func (h *HuaweiPhone) Name() string {
 	return "华为手机"
 }
 
-// SetColor 颜色
+// Color 颜色
 func (h *HuaweiPhone) Color() string {
 	return "金色"
 }
 
-// SetSize 尺寸
+// Size 尺寸
 func (h *HuaweiPhone) Size() int {
 	return 5
 }
@@ -23,17 +23,17 @@ func (h *HuaweiPhone) Size() int {
 type ApplePhone struct {
 }
 
-// SetName 名称
+// Name 名称
 func (h *ApplePhone) Name() string {
 	return "苹果手机"
 }
 
-// SetColor 颜色
+// Color 颜色
 func (h *ApplePhone) Color() string {
 	return "银白色"
 }
 
-// SetSize 尺寸
+// Size 尺寸
 func (h *ApplePhone) Size() int {
 	return 4
 }
@@ -58,14 +58,14 @@ func (f *foxConn) AddProduct(product Product) {
 	f.productList = append(f.productList, product)
 }
 
-// GetFoxConn 获取工厂
-func GetFoxConn() *foxConn {
+// GetFoxConn 获取工厂.
+func GetFoxConn() Factory {
 	f := new(foxConn)
 	f.productList = make([]Product, 0, 3)
 	return f
 }
 
-// Director 指导者（拥有人小明）
+// MingDirector 指导者（拥有人小明）
 func MingDirector() (factory Factory) {
 	conn := GetFoxConn()
 	conn.AddProduct(new(HuaweiPhone))
@@ -74,7 +74,7 @@ func MingDirector() (factory Factory) {
 	return conn
 }
 
-// Director 指导者（拥有人小王）
+// KingDirector 指导者（拥有人小王）
 func KingDirector() (factory Factory) {
 	conn := GetFoxConn()
 	conn.AddProduct(new(ApplePhone))
