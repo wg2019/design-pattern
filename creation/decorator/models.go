@@ -7,6 +7,11 @@ import "fmt"
 type Liberation struct {
 }
 
+// NewLiberation 解放
+func NewLiberation() BigCar {
+	return new(Liberation)
+}
+
 // Checklist 清单
 func (l *Liberation) Checklist() []string {
 	checkList := make([]string, 0, 3)

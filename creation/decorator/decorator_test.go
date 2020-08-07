@@ -4,12 +4,13 @@ package decorator
 import "testing"
 
 func TestFAW_Checklist(t *testing.T) {
-	l := new(Liberation)
+	l := NewLiberation()
 	t.Logf("原厂清单：%s", l.Checklist())
-	faw := NewFAW(l, 1)
-	faw = NewFAW(faw, 2)
-	faw = NewFAW(faw, 3)
-	for _, value := range faw.Checklist() {
+
+	for i := 1; i < 10; i++ {
+		l = NewFAW(l, i)
+	}
+	for _, value := range l.Checklist() {
 		t.Logf("改装情况：%s", value)
 	}
 }
