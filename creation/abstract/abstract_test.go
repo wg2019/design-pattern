@@ -1,4 +1,3 @@
-// Package abstract 测试
 package abstract
 
 import (

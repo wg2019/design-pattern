@@ -1,4 +1,3 @@
-// Package abstract 定义
 package abstract
 
 // Product 定义产品.

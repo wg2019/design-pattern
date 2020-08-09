@@ -1,4 +1,3 @@
-// Package abstract 实现
 package abstract
 
 // banana 香蕉.

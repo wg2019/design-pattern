@@ -1,4 +1,3 @@
-// Package abstract 文档
 package abstract
 
 // 优点
